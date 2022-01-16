@@ -7,7 +7,7 @@
 
 ## 개발 정보
 
-- Front-end : Vue.JS (upper 3.x)
+- Front-end : Vue.js (upper 3.x)
 
 - Back-end : SpringBoot (JAVA 11)
 
