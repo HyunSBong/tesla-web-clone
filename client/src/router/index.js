@@ -2,15 +2,33 @@ import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [{
         path: "/",
+        name: "Test",
+        component: () =>
+            import ("../views/Test.vue"),
+    },
+    {
+        path: "/home",
         name: "Home",
         component: () =>
             import ("../views/Home.vue"),
     },
     {
-        path: "/test",
-        name: "Test",
+        path: "/account/login",
+        name: "Login",
         component: () =>
-            import ("../views/Test.vue"),
+            import ("../views/Login.vue"),
+    },
+    {
+        path: "/account/signin",
+        name: "SignIn",
+        component: () =>
+            import ("../views/SignIn.vue"),
+    },
+    {
+        path: "/account/password/forgot",
+        name: "PasswordReset",
+        component: () =>
+            import ("../views/PasswordReset.vue"),
     },
 ];
 

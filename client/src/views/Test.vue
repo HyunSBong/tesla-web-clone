@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1><a href="/home">Tesla Webpage으로 이동</a></h1>
     <h1>Spring API TEST</h1>
     <button type="button" @click="getData">Get</button>
     <li v-for="resdata in responseData" v-bind:key="resdata">
