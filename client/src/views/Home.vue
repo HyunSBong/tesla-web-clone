@@ -1,44 +1,48 @@
 <template>
-  <div class="step1">
-    <div class="main_bg">
-      <div class="header">
-        <div class="logoArea">
-          <img class="teslaLogo" src="images/logo.png" alt="teslaLogo" />
-        </div>
-        <ul class="nav">
-          <li><a href="https://www.tesla.com/ko_kr/models">MODEL S</a></li>
-          <li><a href="https://www.tesla.com/ko_kr/model3">MODEL 3</a></li>
-          <li><a href="https://www.tesla.com/ko_kr/modelx">MODEL X</a></li>
-          <li><a href="https://www.tesla.com/ko_kr/modely">MODEL Y</a></li>
-          <li>
-            <a href="https://www.tesla.com/ko_kr/cybertruck">CYBERTRUCK</a>
-          </li>
-          <li><a href="https://www.tesla.com/ko_kr/powerwall">POWERWALL</a></li>
-        </ul>
-        <!-- 256 40 -->
-        <ul class="nav2">
-          <li><a href="https://shop.tesla.com/ko_kr?redirect=no">SHOP</a></li>
-          <li><a href="tesla_account.html">TESLA 계정</a></li>
-        </ul>
+  <div class="backgroundPanel">
+    <div class="header">
+      <div class="header_logo">
+        <li>
+          <a href="/home">
+            <img
+              className="header_logo"
+              src="https://assets.website-files.com/5e8fceb1c9af5c3915ec97a0/5ec2f037975ed372da9f6286_Tesla-Logo-PNG-HD.png"
+            />
+          </a>
+        </li>
+      </div>
+      <div class="header_top_menu">
+        <li><a href="/">MODEL S</a></li>
+        <li><a href="/">MODEL 3</a></li>
+        <li><a href="/">MODEL X</a></li>
+        <li><a href="/">MODEL Y</a></li>
+        <li><a href="/">Cybertruck</a></li>
+        <li><a href="/">Powerwall</a></li>
+      </div>
+      <div class="header_edge_menu">
+        <li><a href="/">Shop</a></li>
+        <li><a href="/account/login">계정</a></li>
+        <div class="header_edge_popup_menu">메뉴</div>
       </div>
     </div>
-  </div>
-  <!-- step1 - end -->
-  <div class="prodName">
-    <h1>Model Y</h1>
-  </div>
-  <div class="mid_session">
-    <span
-      ><a href="https://www.tesla.com/ko_kr/modely/design#battery"
-        >주문하기</a
-      ></span
-    >
-    <span
-      ><a href="https://www.tesla.com/ko_kr/modely">자세히 알아보기</a></span
-    >
-  </div>
-  <div class="step2">
-    <div class="sub_bg"></div>
+
+    <div class="float_header" style="z-index: 1">
+      <div class="prodName">
+        <h1>Model Y</h1>
+      </div>
+      <div class="mid_session">
+        <span
+          ><a href="https://www.tesla.com/ko_kr/modely/design#battery"
+            >주문하기</a
+          ></span
+        >
+        <span
+          ><a href="https://www.tesla.com/ko_kr/modely"
+            >자세히 알아보기</a
+          ></span
+        >
+      </div>
+    </div>
   </div>
 </template>
 
@@ -46,9 +50,9 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 * {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: tesla;
   list-style: none;
   text-decoration: none;
   border-collapse: collapse;
@@ -56,81 +60,75 @@ export default {};
   padding: 0px;
   color: #000;
 }
-
 @font-face {
   font-family: "tesla";
   src: url("../assets/font/Gotham/Gotham-Medium.otf");
 }
 
-.main_bg {
-  background-image: url("../assets/images/Desktop-ModelY.jpeg");
-  background-size: 100%;
-  width: 100%;
-  height: 1000px;
+.backgroundPanel {
+  background: url("https://tesla.com/ns_videos/model-3-social.jpg") no-repeat
+    center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  place-items: center;
 }
-.sub_bg {
-  background-image: url("../assets/images/CN-D-3.jpeg");
-  background-size: 100%;
-  width: 100%;
-  height: 1000px;
-}
+
 .header {
-  position: fixed;
   display: flex;
-  width: 1400px;
-  height: 52px;
-  /* background-color:beige; */
-}
-.logoArea {
-  width: 200px;
-  height: 30px;
-  margin-top: 11px;
-  /* background: red; */
-}
-.teslaLogo {
-  width: 100px;
-  height: 10px;
-  margin-top: 10px;
-  margin-left: 20px;
-  justify-content: center;
-  /* background: green; */
-}
-.nav {
-  display: flex;
-  width: 1000px;
-  justify-content: center;
-  line-height: 52px;
-  /* background-color:blue; */
-}
-.nav2 {
-  display: flex;
-  width: 200px;
-  justify-content: flex-end;
-  line-height: 52px;
-  /* background-color:yellow; */
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  padding-top: 15px;
 }
 
-.nav > li {
-  margin-left: 10px;
-  margin-right: 10px;
+.header_logo {
+  object-fit: contain;
+  flex: 1;
+  width: 90px;
+  /* margin-right: 100px; */
 }
 
-.nav > li > a {
-  font-family: tesla;
-  font-size: 14px;
+.header_top_menu {
+  display: flex;
+  gap: 15px;
+}
+
+.header_top_menu > a {
+  text-transform: uppercase;
   color: black;
-}
-.nav2 > li {
-  margin-left: 10px;
-  margin-right: 10px;
+  font-weight: 500;
+  font-size: 15px;
 }
 
-.nav2 > li > a {
-  font-family: tesla;
-  font-size: 14px;
+.header_edge_menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 100px;
+}
+
+.header_edge_menu > a {
+  text-transform: uppercase;
   color: black;
+  font-weight: 500;
+  font-size: 15px;
+  z-index: 0;
+  position: relative;
 }
 
+/* root productName and OrdeBtn r*/
 .prodName {
   position: fixed;
   top: 20%;
@@ -138,10 +136,12 @@ export default {};
   width: 500px;
   height: 30px;
 }
+
 .prodName > h1 {
   font-family: tesla;
   font-size: 40px;
 }
+
 .mid_session {
   display: flex;
   position: fixed;
@@ -150,7 +150,6 @@ export default {};
   top: 80%;
   left: 28%;
   cursor: pointer;
-  /* background-color:blueviolet; */
 }
 
 .mid_session > span {
@@ -163,21 +162,24 @@ export default {};
   line-height: 40px;
 }
 
-/* 171A20CC */
 .mid_session > span:nth-child(1) {
   background-color: #171a20cc;
 }
+
 .mid_session > span:nth-child(2) {
   background-color: #ffffffa6;
 }
+
 .mid_session > span > a {
   font-family: tesla;
   font-size: 12px;
 }
+
 .mid_session > span:nth-child(1) > a {
   color: white;
 }
 
+/* animation */
 @keyframes shadeIn {
   from {
     transform: translateY(30px);
