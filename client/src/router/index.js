@@ -13,6 +13,12 @@ const routes = [{
             import ("../views/Home.vue"),
     },
     {
+        path: "/shop",
+        name: "ShopHome",
+        component: () =>
+            import ("../views/ShopHome.vue"),
+    },
+    {
         path: "/account/login",
         name: "Login",
         component: () =>
@@ -29,6 +35,12 @@ const routes = [{
         name: "PasswordReset",
         component: () =>
             import ("../views/PasswordReset.vue"),
+    },
+    {
+        path: "/test/scrollsnap",
+        name: "scrollSnapTest",
+        component: () =>
+            import ("../views/ScrollSnap.vue"),
     },
 ];
 
