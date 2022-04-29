@@ -35,7 +35,7 @@ public class MemberService implements UserDetailsService {
     }
 
     @Override
-    public UserDetails loadUserByUserName(String email) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         MemberEntity member = memberRepository.findByEmail(email);
 
         if (member == null) {

@@ -35,9 +35,10 @@ public class MemberEntity {
         member.setName(memberDto.getName());
         member.setEmail(member.getEmail());
         member.setAddress(memberDto.getAddress());
-        String password = passwordEncoder.encode(memberDto.getPassword());
+        String password = passwordEncoder.encode((memberDto.getPassword()));
         member.setPassword(password);
         member.setRole(AuthRole.USER);
+//        member.setRole(AuthRole.ADMIN);
         return member;
     }
 
