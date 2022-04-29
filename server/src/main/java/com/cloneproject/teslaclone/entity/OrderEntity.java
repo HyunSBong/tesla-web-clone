@@ -13,7 +13,7 @@ import java.util.List;
 @Table(name = "orders")
 @Getter
 @Setter
-public class OrderEntity {
+public class OrderEntity extends AllTimeInfoEntity {
 
     @Id
     @GeneratedValue
@@ -28,8 +28,8 @@ public class OrderEntity {
     private OrderStatus orderStatus;
 
     private LocalDateTime orderDate;
-    private LocalDateTime reqTime;
-    private LocalDateTime updateTime;
+//    private LocalDateTime reqTime;
+//    private LocalDateTime updateTime;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, fetch = FetchType.LAZY) // 영속성 전이 설정 (cascade)
     private List<OrderItemEntity> orderItems = new ArrayList<>(); // 하나의 주문이 여러 상품을 가짐

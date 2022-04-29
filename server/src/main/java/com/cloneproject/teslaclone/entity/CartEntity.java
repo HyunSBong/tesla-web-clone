@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Setter
 @Table(name = "cart")
 @ToString
-public class CartEntity {
+public class CartEntity extends AllTimeInfoEntity {
 
     @Id
     @Column(name = "cart_id")

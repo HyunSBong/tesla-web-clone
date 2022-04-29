@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Setter
 @ToString
 //@NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class MemberEntity {
+public class MemberEntity extends AllTimeInfoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "member_id")

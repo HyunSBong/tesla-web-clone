@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Entity
 @Getter
 @Setter
-public class OrderItemEntity {
+public class OrderItemEntity extends AllTimeInfoEntity {
 
     @Id
     @GeneratedValue
@@ -26,8 +26,8 @@ public class OrderItemEntity {
 
     private int orderPrice;
     private int count;
-    private LocalDateTime reqTime;
-    private LocalDateTime updateTime;
+//    private LocalDateTime reqTime;
+//    private LocalDateTime updateTime;
 
     public int getTotalPrice(){
         return orderPrice*count;
