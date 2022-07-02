@@ -25,14 +25,14 @@ public class OrderEntity extends AllTimeInfoEntity {
     private MemberEntity memberEntity;
 
     @Enumerated(EnumType.STRING)
-    private OrderStatus orderStatus;
+    private OrderStatus orderStatus; // 주문 상태
 
-    private LocalDateTime orderDate;
-//    private LocalDateTime reqTime;
-//    private LocalDateTime updateTime;
+    private LocalDateTime orderDate; // 주문일
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, fetch = FetchType.LAZY) // 영속성 전이 설정 (cascade)
     private List<OrderItemEntity> orderItems = new ArrayList<>(); // 하나의 주문이 여러 상품을 가짐
+    private LocalDateTime reqTime;
+    private LocalDateTime updateTime;
 //
 //    public void addOrderItem(OrderItem orderItem) {
 //        orderItems.add(orderItem);

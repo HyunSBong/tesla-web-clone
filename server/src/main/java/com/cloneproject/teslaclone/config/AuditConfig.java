@@ -6,10 +6,10 @@ import org.springframework.data.domain.AuditorAware;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @Configuration
-@EnableJpaAuditing
+@EnableJpaAuditing // JPA Auditing
 public class AuditConfig {
     // Audit 설정
-    @Bean
+    @Bean // AuditorAware Bean 등록
     public AuditorAware<String> auditorProvider() {
         return new AuditorAwareCustomImpl();
     }
