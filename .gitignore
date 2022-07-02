@@ -8,6 +8,8 @@
 /server/build
 /server/.idea
 /server/.gradle
+/server/src/main/resources/static
+/server/src/main/resources/templates
 
 # Client
 /client/dist

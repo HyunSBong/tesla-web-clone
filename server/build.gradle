@@ -23,6 +23,7 @@ dependencies {
 	implementation 'mysql:mysql-connector-java'
 	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.4.5'
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	implementation group: 'org.modelmapper', name: 'modelmapper', version: '2.3.8'
 	runtimeOnly 'com.h2database:h2'
 }
 

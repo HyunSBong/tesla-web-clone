@@ -29,11 +29,11 @@ public class OrderEntity extends AllTimeInfoEntity {
 
     private LocalDateTime orderDate; // 주문일
 
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, fetch = FetchType.LAZY) // 영속성 전이 설정 (cascade)
-    private List<OrderItemEntity> orderItems = new ArrayList<>(); // 하나의 주문이 여러 상품을 가짐
-    private LocalDateTime reqTime;
-    private LocalDateTime updateTime;
-//
+//    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, fetch = FetchType.LAZY) // 영속성 전이 설정 (cascade)
+//    private List<OrderItemEntity> orderItems = new ArrayList<>(); // 하나의 주문이 여러 상품을 가짐
+//    private LocalDateTime reqTime;
+//    private LocalDateTime updateTime;
+
 //    public void addOrderItem(OrderItem orderItem) {
 //        orderItems.add(orderItem);
 //        orderItem.setOrder(this);
